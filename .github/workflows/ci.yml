@@ -2,7 +2,9 @@ name: ci
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - 'cad**'
   pull_request:
     types: [ opened, reopened ]
   release:
@@ -27,7 +29,7 @@ jobs:
           wget https://github.com/src-d/gitbase/releases/download/v0.23.1/gitbase_v0.23.1_linux_amd64.tar.gz
           tar -xvzf gitbase_v0.23.1_linux_amd64.tar.gz
           cd gitbase_linux_amd64
-          
+
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
