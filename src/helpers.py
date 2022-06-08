@@ -108,7 +108,6 @@ def get_change_info(change: TreeChange, repo: Repo) -> Dict[str, str]:
 
         elif new_sha is None:
             res['deleted'] = len(repo.get_object(old_sha).data.decode().splitlines())
-
         else:
             differences = difflib.unified_diff(repo.get_object(old_sha).data.decode().splitlines(),
                                                repo.get_object(new_sha).data.decode().splitlines())
