@@ -28,7 +28,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           wget https://github.com/src-d/gitbase/releases/download/v0.23.1/gitbase_v0.23.1_linux_amd64.tar.gz
           tar -xvzf gitbase_v0.23.1_linux_amd64.tar.gz
-          cd gitbase_linux_amd64
+        
 
       - name: Lint with flake8
         run: |
